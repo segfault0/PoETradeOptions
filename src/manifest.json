@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "PoE Trade Options",
-  "description": "",
-  "version": "0.1",
+  "description": "Allow you to set the default values for the 'Online only' and 'Buyout only' fields on poe.trade.  Not affiliated with poe.trade or Grinding Gear Games in any way.",
+  "version": "1.0",
 
   "browser_action": {
   },

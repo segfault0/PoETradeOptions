@@ -3,7 +3,7 @@
 
   "name": "PoE Trade Options",
   "description": "",
-  "version": "1.0",
+  "version": "0.1",
 
   "browser_action": {
   },

@@ -8,12 +8,14 @@ function optionsLoaded(results) {
 	var options = getOptions(results);
 	document.getElementById("onlineOnlyChk").checked = options["onlineOnly"];
 	document.getElementById("buyoutOnlyChk").checked = options["buyoutOnly"];
+	document.getElementById("sortBuyoutChk").checked = options["sortBuyout"];
 }
 
 function saveOptions() {
 	var options = {};
 	options["onlineOnly"] = document.getElementById("onlineOnlyChk").checked;
 	options["buyoutOnly"] = document.getElementById("buyoutOnlyChk").checked;
+	options["sortBuyout"] = document.getElementById("sortBuyoutChk").checked;
 	var storageObj = {};
 	storageObj[OPTIONS_KEY] = options;
 	storage.set(storageObj, optionsSaved);

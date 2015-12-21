@@ -22,5 +22,4 @@ function optionsLoaded(results) {
 			}
 		}
 	}
-
 }

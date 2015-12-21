@@ -10,7 +10,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["*://*.poe.trade/"],
+      "matches": ["*://*.poe.trade/*"],
       "js": ["./js/utils.js", "./js/PoETrade.js"],
       "run_at": "document_end"
     }

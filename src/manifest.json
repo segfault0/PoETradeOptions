@@ -4,9 +4,13 @@
   "name": "PoE Trade Options",
   "description": "Allow you to set the default values for the 'Online only' and 'Buyout only' fields on poe.trade.",
   "version": "1.0.2",
-
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
   "permissions": [
-    "storage"
+    "webRequest",
+    "storage",
+    "*://poe.trade/*"
   ],
   "content_scripts": [
     {
@@ -18,5 +22,9 @@
   "options_ui": {
     "page": "PoETradeOptions.html",
     "chrome_style": true
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
   }
 }

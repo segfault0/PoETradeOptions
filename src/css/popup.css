@@ -1,0 +1,19 @@
+.search-list-body {
+    width:350px;
+    height: 400px;
+    /*padding-top: 50px;*/
+}
+
+.search-list {
+	margin: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	border: 1px black solid;
+}
+
+.search-entry {
+	border: 1px black solid;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	border-radius: 2px;
+}

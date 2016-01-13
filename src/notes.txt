@@ -1,1 +1,2 @@
 http://poe.trade/search/omoniitamonita?sort=price_in_chaos&bare=true
+$(".search.button[value='Search!']").parent().prepend("<input type='button' class='search button' value='Save search!'>")

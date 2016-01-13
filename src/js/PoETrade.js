@@ -1,3 +1,4 @@
+// Load options and set defaults accordingly
 storage.get(OPTIONS_KEY, optionsLoaded);
 
 function optionsLoaded(results) {

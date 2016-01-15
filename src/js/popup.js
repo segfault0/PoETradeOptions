@@ -1,10 +1,11 @@
 $(function() {
 	$("#searchList").sortable({
 			//stop: saveSearchListState,
-			containment: "parent",
+			containment: "document",
 			axis: "y",
 			distance: 5,
-			scroll: true
+			scroll: true,
+			items: ".search-entry:not(:first)"
 		}
 	);
 	$("#searchList").disableSelection();

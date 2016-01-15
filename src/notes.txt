@@ -1,2 +1,13 @@
 http://poe.trade/search/omoniitamonita?sort=price_in_chaos&bare=true
 $(".search.button[value='Search!']").parent().prepend("<input type='button' class='search button' value='Save search!'>")
+
+
+
+Have navbar or something below list
+Two textfields with button next to them for saving searches
+When you open the popup, if the current tab has a valid search url, auto-fill that text field
+Other text field is for user notes about each search
+Use button to add search url + notes to the list
+
+Tracking lowest price optional?
+Header with current exalt price in chaos?

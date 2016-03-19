@@ -1,21 +1,40 @@
 document.addEventListener("DOMContentLoaded", function() {
+	var optionsArray = [
+        {
+            "text": "On",
+            "value": true
+        },
+        {
+            "text": "Off",
+            "value": false
+        }
+    ];
+
+    var onlineSelect = document.getElementById("onlineOnlyId");
+    var buyoutSelect = document.getElementById("buyoutOnlyId");
+
+    for(var i = 0; i < optionsArray.length; i++) {
+        var curOption = optionsArray[i];
+        onlineSelect.options.add(new Option(curOption.text, curOption.value));
+        buyoutSelect.options.add(new Option(curOption.text, curOption.value));
+    }
+
 	document.getElementById("saveBtn").addEventListener("click", saveOptions);
 
-	storage.get(OPTIONS_KEY, optionsLoaded); 
+	getOptions(optionsLoaded);
 });
 
-function optionsLoaded(results) {
-	var options = getOptions(results);
-	document.getElementById("onlineOnlyChk").checked = options["onlineOnly"];
-	document.getElementById("buyoutOnlyChk").checked = options["buyoutOnly"];
-	document.getElementById("sortBuyoutChk").checked = options["sortBuyout"];
+function optionsLoaded(options) {
+	document.getElementById("onlineOnlyId").value = options["onlineOnly"];
+	document.getElementById("buyoutOnlyId").value = options["buyoutOnly"];
+	document.getElementById("sortBuyoutId").checked = options["sortBuyout"];
 }
 
 function saveOptions() {
 	var options = {};
-	options["onlineOnly"] = document.getElementById("onlineOnlyChk").checked;
-	options["buyoutOnly"] = document.getElementById("buyoutOnlyChk").checked;
-	options["sortBuyout"] = document.getElementById("sortBuyoutChk").checked;
+	options["onlineOnly"] = document.getElementById("onlineOnlyId").value === "true";
+	options["buyoutOnly"] = document.getElementById("buyoutOnlyId").value === "true";
+	options["sortBuyout"] = document.getElementById("sortBuyoutId").checked;
 	var storageObj = {};
 	storageObj[OPTIONS_KEY] = options;
 	storage.set(storageObj, optionsSaved);

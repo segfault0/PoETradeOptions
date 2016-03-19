@@ -4,12 +4,13 @@
 	<title>PoETrade Options</title>
 
 	<style>
+		/*TODO: This should probably be moved to a css file*/
 		div.optionsDiv {
 			/*border-style: inset;
 			border-width: 0.2em;*/
 			margin: 0em 1em 1em 1em;
 			padding: 0em .8em .8em .8em;
-			width: 30em;
+			width: 40em;
 		}
 
 		div.saveDiv {
@@ -24,12 +25,13 @@
 	<script src="./js/utils.js"></script>
 </head>
 <body>
+    /*TODO: This is really ugly, but it works for now*/
 	<div class="optionsDiv">
-		<label><input type="checkbox" id="onlineOnlyChk">  Set 'Online only' to 'On' for searches from poe.trade homepage</label>
+		<label><select id="onlineOnlyId"></select> 'Online only' default value when searching from poe.trade homepage</label>
 		<br>
-		<label><input type="checkbox" id="buyoutOnlyChk">  Set 'Buyout only' to 'On' for searches from poe.trade homepage</label>
+		<label><select id="buyoutOnlyId"></select>  'Buyout only' default value when searching from poe.trade homepage</label>
 		<br>
-		<label><input type="checkbox" id="sortBuyoutChk">  Sort search results by buyout price automatically</label>
+		<label><input type="checkbox" id="sortBuyoutId">  Automatically sort search results by lowest buyout price</label>
 
 		<div class="saveDiv">
 			<button id="saveBtn">Save</button><span id="status" class="status"></span>

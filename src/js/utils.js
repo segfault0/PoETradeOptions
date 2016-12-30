@@ -1,6 +1,6 @@
 var storage = chrome.storage.sync;
 var OPTIONS_KEY = "POE_TRADE_OPTIONS";
-var defaultOptions = { "onlineOnly": true, "buyoutOnly": true, "sortBuyout": true };
+var defaultOptions = { "onlineValue": true, "buyoutValue": "1", "sortBuyout": true };
 
 // Returns either the options stored in results map or the default options
 

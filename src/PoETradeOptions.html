@@ -27,11 +27,18 @@
 <body>
     <!--TODO: This is really ugly, but it works for now-->
 	<div class="optionsDiv">
-		<label><select id="onlineOnlyId"></select> 'Online only' default value when searching from poe.trade homepage</label>
+		<label><select id="onlineValueId">
+			<option value=true>On</option>
+			<option value=false>Off</option>
+		</select> 'Online only' default value when searching from poe.trade homepage</label>
 		<br>
-		<label><select id="buyoutOnlyId"></select>  'Buyout only' default value when searching from poe.trade homepage</label>
+		<label><select id="buyoutValueId">
+			<option value>Either</option>
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</select>  'Buyout only' default value when searching from poe.trade homepage</label>
 		<br>
-		<label><input type="checkbox" id="sortBuyoutId">  Automatically sort search results by lowest buyout price</label>
+		<!-- <label><input type="checkbox" id="sortBuyoutId">  Automatically sort search results by lowest buyout price</label> -->
 
 		<div class="saveDiv">
 			<button id="saveBtn">Save</button><span id="status" class="status"></span>

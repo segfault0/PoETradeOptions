@@ -16,14 +16,5 @@ function optionsLoaded(options) {
 		document.getElementsByName("has_buyout")[0].dispatchEvent(new Event("chosen:updated"));
 		// Make sure the box is not randomly highlighted.  This is real ugly but there aren't many IDs...
 		document.getElementsByName("has_buyout")[0].nextSibling.children[0].classList.remove("nonempty-select");
-		
-
-	} /* else if(curPath.startsWith("/search")) {
-		if(options["sortBuyout"]) {
-			var buyoutSpans = document.querySelectorAll("[data-name='price_in_chaos']");
-			if(buyoutSpans.length != 0) {
-				buyoutSpans[0].click();
-			}
-		}
-	} */
+	}
 }

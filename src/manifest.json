@@ -3,7 +3,7 @@
 
   "name": "PoE Trade Options",
   "description": "Allow you to set the default values for the 'Online only' and 'Buyout only' fields on poe.trade.",
-  "version": "1.2.0",
+  "version": "1.2.1",
 
   "permissions": [
     "storage"
